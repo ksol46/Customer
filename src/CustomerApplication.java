@@ -47,6 +47,10 @@ public class CustomerApplication {
 			System.out.println(customer.showCustomerInfo());
 		}
 		
+		
+			
+		
+		
 	}
 	
 	//id로 해당 고객객체를 찾아주는 메소드
