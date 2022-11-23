@@ -23,35 +23,34 @@ public class CustomerApplication {
 		customerList.add(customerJeong);
 		customerList.add(customerYul);
 	
-		//모든 고객 정보 출력
-		showAllCustomer();
-		
-		//id로 찾은 고객의 실제 지불금액, 보너스 포인트 출력
-		Customer cunstomer = findCustomer(10050); //customer  객체를 받는다.
-		
-		if (cunstomer == null ) {
-			System.out.println("======= 경고 ========");
-			System.out.println("존재하지 않는 회원입니다.");
-		} else {
-			//고객의 실제 지불금액 보너스 포인트
-			showPriceBonus(cunstomer, 100000); //10000: 상품 가격
-		}
+	//모든 고객 정보 출력
+	showAllCustomer();
 		
 	
-	}
 	
-	//모든 고객정보 출력
-	public static void showAllCustomer() {
-		System.out.println("===============모든 고객 정보 출력===============");
-		for (Customer customer : customerList) {
-			System.out.println(customer.showCustomerInfo());
-		}
-		
-		
+	//id로 찾은 고객의 실제 지불금액, 보너스 포인트 출력
+			Customer customer = findCustomer(10050); //customer  객체를 받는다.
+			
+			if (customer == null ) {
+				System.out.println("======= 경고 ========");
+				System.out.println("존재하지 않는 회원입니다.");
+			} else {
+				//고객의 실제 지불금액 보너스 포인트
+				showPriceBonus(customer, 100000); //10000: 상품 가격
+			}
 			
 		
+}
+	
+	//모든 고객정보 출력
+		public static void showAllCustomer() {
+			System.out.println("===============모든 고객 정보 출력===============");
+			for (Customer customer : customerList) {
+				System.out.println(customer.showCustomerInfo());
+			}
+			
+		}
 		
-	}
 	
 	//id로 해당 고객객체를 찾아주는 메소드
 	public static Customer findCustomer(int customerID) {
